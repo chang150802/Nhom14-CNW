@@ -1,0 +1,100 @@
+.sanpham{
+    position: relative;
+    box-shadow: 0 2px 8px .5px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+}
+.img{
+    position: relative;
+}
+.img img{
+    width: 100%;
+}
+.thongsoanh{
+    left: 0;
+    position:absolute;
+    right: 0;
+    text-align: center;
+    top: 37px;
+    padding: 0 10px;
+}
+.thongsoanh li{
+    display: inline-block;
+    color: #070707;
+    margin: 0 15px;
+    position: relative;
+}
+.thongsoanh li::before{
+    background-color: #b3b3b3;
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: -20px;
+    top: 9px;
+    transition: all 0.4s ease 0s;
+    width: 6px;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;}
+ .thongsoanh li:last-child::before{
+        display: none;
+ }
+.click{
+        bottom: 55px;
+        display: flex;
+        justify-content: center;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        transition: all 0.3s ease 0s;
+        z-index: 99;
+        padding: 10px;
+}
+.sanpham:hover .click{
+    bottom: 45px;
+    opacity: 1;
+}
+/**thiết lập khung ô cho các icon và căn chỉnh giữa**/
+.click a{
+    background-color: transparent;
+    color: #202020;
+    display: inline-flex;
+    height: 38px;
+    justify-content: center;
+    margin: 0 5.5px;
+    padding: 7px 0;
+    transition: all 0.3s ease 0s;
+    width: 50px;
+    font-size: 18px;
+    border: 1px solid #e8e8e8;
+    position: relative;
+}
+.chitietsp {
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    opacity: 1;
+    padding: 60px 40px 42px;
+    position: absolute;
+    transition: all kk
+    
+}
+.chitietsp1 >h4{
+    color: #161515eb;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    font-family: "Oswald",sans-serif;
+    text-align: center;
+}
+.gia >span{
+    color: #161515eb;
+    font-family: "Oswald",sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 7px;
+    margin-right: 7px;
+    text-align: center;
+}

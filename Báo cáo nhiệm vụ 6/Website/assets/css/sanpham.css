@@ -1,0 +1,192 @@
+/**
+.xe , .sanpham ,.img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: rgb(10, 11, 15);
+    padding: 8px 0;
+}**/
+.sanpham {
+    position: relative;
+    box-shadow: 0 2px 8px .5px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+}
+
+.img {
+    position: relative;
+}
+
+.img img {
+    width: 100%;
+}
+
+.thongsoanh {
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 37px;
+    padding: 0 10px;
+}
+
+.thongsoanh li {
+    display: inline-block;
+    color: #070707;
+    margin: 0 15px;
+    position: relative;
+}
+
+.thongsoanh li::before {
+    background-color: #b3b3b3;
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: -20px;
+    top: 9px;
+    transition: all 0.4s ease 0s;
+    width: 6px;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.thongsoanh li:last-child::before {
+    display: none;
+}
+
+.click {
+    bottom: 55px;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    z-index: 99;
+    padding: 10px;
+}
+
+/**bo chon di chuot**/
+.sanpham:hover .click {
+    bottom: 45px;
+    opacity: 1;
+}
+
+.click a {
+    background-color: transparent;
+    color: #202020;
+    display: inline-flex;
+    height: 38px;
+    justify-content: center;
+    margin: 0 5.5px;
+    padding: 7px 0;
+    transition: all 0.3s ease 0s;
+    width: 50px;
+    font-size: 18px;
+    border: 1px solid #e8e8e8;
+    position: relative;
+}
+
+.click a:hover {
+    background-color: #ffb52f;
+    border: 1px solid #ffb52f;
+}
+
+.click a i {
+    line-height: 21px;
+
+}
+
+.chitietsp {
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    opacity: 1;
+    padding: 60px 40px 42px;
+    position: absolute;
+    transition: all
+}
+
+.chitietsp1>h3 {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 2px;
+    display: inline-block;
+    padding: 8px, 0;
+    font-family: "Oswald", sans-serif;
+
+}
+
+.chitietsp1>h3>a {
+    color: rgb(20, 21, 37);
+}
+
+.gia>span {
+    color: #161515eb;
+    font-family: "Oswald", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 2px;
+    display: inline-block;
+    padding: 8px, 0;
+
+}
+
+
+body {
+
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+
+
+
+.container {
+
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+
+}
+
+
+.row {
+    display: flex;
+    /**dàn hàng ngang**/
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+
+
+}
+
+
+.xe {
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+#idxe7 {
+    margin-left: 30px;
+}
+
+#idxe8 {
+    margin-left: 70px;
+}
+
+#idxe9 {
+    margin-left: 50px;
+}
