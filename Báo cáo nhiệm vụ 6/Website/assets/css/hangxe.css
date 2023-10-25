@@ -1,0 +1,70 @@
+:root {
+	--primary-color: rosybrown;
+}
+
+.car-list img{
+    width: 100%;
+    height: 100%;
+	object-fit: cover;
+	object-position: center;
+    transition: 0.5s;
+}
+
+body{
+    display: flex;
+}
+
+.menu {
+	padding: 20px;
+	margin: 50px auto;
+    margin-bottom: auto;
+	width: 100%;
+	text-align: center;
+    background-color: #470808;
+}
+
+.car-menu {
+	margin-bottom: 40px;
+}
+
+.car-menu button {
+	color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	padding: 10px 40px;
+	border-radius: 50px;
+	font-weight: 600;
+	transition: 0.25s;
+	cursor: pointer;
+	background-color: #fff;
+	margin: 5px;
+}
+
+.car-menu button:hover,
+.car-menu button.active {
+	color: #fff;
+	background-color: var(--primary-color);
+}
+
+.car-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.car-item {
+	width: 20%;
+	height: 200px;
+	margin: 10px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.car-item:hover img{
+    transform: scale(2,2);
+}
+
+.hide {
+	display: none;
+}
+

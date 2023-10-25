@@ -98,21 +98,34 @@ html{
     padding: 0 23.5px;
 }
 
-.nav .fa-arrow-down{
-    font-size: 14px;
-}
 /*giỏ hàng*/
 .cart-shopping{
     float: right;
     display: flex;
     justify-content: space-between;
     padding: 10px 25px;
+    font-size: 17px;
+}
+
+.cart-shopping a{
+    text-decoration: none; /*bỏ gạch chân*/
+}
+
+.cart-shopping > a{
+    color: rosybrown;
+    text-transform: uppercase;
+}
+
+.cart-shopping:hover a{
+    color: #570505;
+    background-color: white;
 }
 .cart-shopping i{
-    font-size: 25px;
+    font-size: 20px;
     color: rosybrown;
     cursor: pointer;
 }
+
 
 /*2.silder*/
 .slider-container {
@@ -303,6 +316,7 @@ button:focus {
     border: none;
 }
 
+
 /*4.footer*/
 .footer{
     width: 100%;
@@ -345,25 +359,25 @@ button:focus {
     background-color: black;
 }
 
-.footer-bottom .container ul{
+.footer-bottom .footer-title ul{
     font-size: 35px;
     display: flex;
     justify-content: center;
     list-style-type: none;
 }
 
-.footer-bottom .container p{
+.footer-bottom .footer-title p{
     font-size: 20px;
     text-align: center;
     padding: 10px;
     margin: 0;
 }
-.footer-bottom .container li{
+.footer-bottom .footer-title li{
     padding: 25px 35px;
     cursor: pointer;
 }
 
-.footer-bottom .container i{
+.footer-bottom .footer-title i{
     color: white;
 }
 
