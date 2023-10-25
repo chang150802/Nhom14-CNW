@@ -1,8 +1,3 @@
-<?php 
-   session_start();
-   include_once("ketnoi.php");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,19 +31,22 @@
                 </div>
          
                 <div class="col col-haft contact-form">
-                    <form action="">
+                    <form action="" method="post">
                         <div class="row">
                             <div class="col col-haft">
-                                <input type="text" name="" placeholder="Name" required id="" class="form-control">
+                                <label for="name"></label>
+                                <input type="text" name="name" placeholder="Name" required id="name" class="form-control">
                             </div>
                             <div class="col col-haft">
-                                <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                                <label for="email"></label>
+                                <input type="email" name="email" placeholder="Email" required id="email" class="form-control">
                             </div>
                         </div>
 
                         <div class="row mt-8">
                             <div class="col col-full">
-                                <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                                <label for="message"></label>
+                                <input type="text" name="message" placeholder="Message" required id="message" class="form-control">
                             </div>
                         </div>
 
@@ -63,5 +61,24 @@
     </div>
 
     <?php include "trangchu/footer.php";?>
+    <?php
+    $mysqli = new mysqli("localhost","root","","website");
+    $conn_c = mysqli_connect("localhost","root","","website");
+    // Get the form data
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    // Insert the form data into the database
+    $sql_c = "INSERT INTO contacts (name, email, message) VALUES ('$name', '$email', '$message')";
+    if (mysqli_query($conn_c, $sql_c)) {
+        echo "Form data inserted successfully!";
+    } else {
+        echo "Error inserting form data: " . mysqli_error($conn_c);
+    }
+
+    // Close the database connection
+    //mysqli_close($conn);
+    ?>
 </body>
 </html>
