@@ -1,3 +1,8 @@
+<?php 
+   session_start();
+   include_once("ketnoi.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +20,10 @@
     <!-- 1. header-->
     <?php include "trangchu/hearder.php";?>    
     <div class="menu">
+        <?php
+            $results = $mysqli->query("SELECT * FROM brand ORDER BY id ASC");
+            $obj = $results->fetch_object();
+        ?>
         <div class="car-menu">
             <button class="active" type-car="all">All car</button>
             <button type-car="Audi">Audi</button>
@@ -28,52 +37,35 @@
             <button type-car="Toyota">Toyota</button>
         </div>
         <div class="car-list">
-            <div class="car-item" type-car="Audi">
-                <img src="./xe/Audi A1 den.jpg" alt="">
-            </div>
-            <div class="car-item" type-car="Audi">
-                <img src="./xe/Audi A1 do.jpg" alt="">
-            </div>
-            <div class="car-item" type-car="Audi">
-                <img src="./xe/Audi A1 trang.jpg" alt="">
-            </div>
-            <div class="car-item" type-car="Audi">
-                <img src="./xe/Audi A1 vang.jpg" alt="">
-            </div>
-            <div class="car-item" type-car="Audi">
-                <img src="./xe/Audi A1 xanh.jpg" alt="">
-            </div>
-            <div class="car-item" type-car="Ford Ranger">
-                <img src="./xe/Ford Ranger nâu.png" alt="">
-            </div>
-            <div class="car-item" type-car="Ford Ranger">
-                <img src="./xe/Ford Ranger trắng.png" alt="">
-            </div>
-            <div class="car-item" type-car="Ford Ranger">
-                <img src="./xe/Ford Ranger vàng.png" alt="">
-            </div>
-            <div class="car-item" type-car="Ford Ranger">
-                <img src="./xe/Ford Ranger xanh dương.png" alt="">
-            </div>
-            <div class="car-item" type-car="Ford Ranger">
-                <img src="./xe/Ford Ranger đen.png" alt="">
-            </div>
-            <div class="car-item" type-car="Huyndai">
-                <img src="./xe/Hyundai Accent  đen.jpg" alt="">
-            </div>
-            <div class="car-item" type-car="Huyndai">
-                <img src="./xe/Hyundai Accent  đỏ.jpg" alt="">
-            </div>
-            <div class="car-item" type-car="Huyndai">
-                <img src="./xe/Hyundai Accent trắng.jpg" alt="">
-            </div>
-            <div class="car-item" type-car="Huyndai">
-                <img src="./xe/Hyundai Accent xanh dương.jpg" alt="">
-            </div>
-            <div class="car-item" type-car="Huyndai">
-                <img src="./xe/Hyundai Accent xám.jpg" alt="">
-            </div>
-            
+            <?php
+                $results = $mysqli->query("SELECT * FROM brand ORDER BY id ASC");
+		        if ($results) { 
+			        //fetch results set as object and output HTML
+			        while($obj = $results->fetch_object())
+			        {
+                    ?>
+                    <?php
+                        $array = [];
+                        $brand = $obj->brand_name;
+                        switch($brand){
+                            case 'Audi':
+                                echo ''.$obj->brand_name='Audi';
+                                break;
+                            case 'Ford Ranger':
+                                echo ''.$obj->brand_name='Ford Ranger';
+                                break;
+                            default:
+                                
+                                break;
+                        }              
+                    ?>
+                    <div class="car-item" type-car="All car">
+                        <img src="xehot/<?php echo  $obj->brand_img_name;?>" alt="">
+                    </div>
+                    <?php
+                    }
+                }
+                ?>
         </div>
     </div>
     <script src="./assets/js/hangxe.js"></script>

@@ -18,13 +18,13 @@
 <body>
    <!--1.header-->
     <?php
-     include "trangchu/hearder.php";
+     include "trangchu_ad/hearder.php";
     //2.Slider
-     include "trangchu/Slider.php";
+     include "trangchu_ad/Slider.php";
     //3.Content 
-    include "trangchu/Content.php";
+    include "trangchu_ad/Content.php";
     //4.footer
-    include "trangchu/footer.php";
+    include "trangchu_ad/footer.php";
         ?>
     <script src="./assets/js/slider.js"></script>
 </body>

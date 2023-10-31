@@ -1,0 +1,62 @@
+.container-fluid{
+    padding: 50px 300px;
+    background-color: #570505;
+    color: white;
+}
+.card-header{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.card-body{
+    padding: 10px 60px;
+    border: 2px solid rosybrown;
+    border-radius: 5px;
+}
+
+.form-group{
+    padding: 5px 0;
+    position: relative;
+    margin: 20px 0 40px;
+}
+/*
+.form-control1{
+    width: 300px;
+    height: 30px;
+    border: 1px solid rosybrown;
+    border-radius: 5px;
+}
+.form-control2{
+    width: 300px;
+    height: 30px;
+}
+.form-control3{
+    width: 800px;
+    height: 100px;
+    border: 1px solid rosybrown;
+    border-radius: 5px;
+}
+.form-control4{
+    width: 300px;
+    height: 30px;
+    border: 1px solid rosybrown;
+    border-radius: 5px;
+}
+.form-control5{
+    width: 300px;
+    height: 30px;
+    border: 1px solid rosybrown;
+    border-radius: 5px;
+}
+.form-control6{
+    width: 300px;
+    height: 30px;
+    border: 1px solid rosybrown;
+    border-radius: 5px;
+}
+*/
+.btn{
+    border: 1px solid rosybrown;
+    border-radius: 5px;
+}
+

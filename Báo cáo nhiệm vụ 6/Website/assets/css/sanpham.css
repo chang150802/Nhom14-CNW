@@ -11,7 +11,10 @@ body {
     padding-bottom: 50px;
     background-color: #570505;
 }
-
+.item-sp{
+    text-decoration: none;
+    color: #fff;
+}
 .row {
     display: flex;
     /**dàn hàng ngang**/
@@ -21,7 +24,7 @@ body {
 }
 
 .xe {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 0px;
 }
 
@@ -122,8 +125,8 @@ body {
 }
 
 .click a:hover {
-    background-color: #ffb52f;
-    border: 1px solid #ffb52f;
+    background-color: rosybrown;
+    border: 1px solid rosybrown;
 }
 
 .click a i {

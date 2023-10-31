@@ -32,7 +32,7 @@
     line-height: 1.6;
 }
 
-.contact-info i[class*="ti-"]{
+.contact-info i[class*="fa-solid"]{
     width: 30px;
     display: inline-block;
 }

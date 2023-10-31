@@ -1,0 +1,30 @@
+.container-fluid{
+    padding: 50.1px 0;
+    background-color: #570505;
+    color: white;
+}
+
+.card{
+    border: 1px solid rosybrown;
+}
+
+.card-header{
+    text-align: center;
+}
+
+table,th,td{
+    border: 1px solid rosybrown;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+td{
+    text-align: center;
+}
+
+img{
+    width: 100%;
+}
+

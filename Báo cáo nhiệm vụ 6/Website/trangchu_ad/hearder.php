@@ -25,7 +25,7 @@
             </li>
     </ul>
     <div class="cart-shopping">
-        <a href="dangnhap.php"><i class="fa-solid fa-user"></i> Đăng nhập</a>
+        <a href="dangnhap.php"><i class="fa-solid fa-user"></i> Admin</a>
         <!--<a href="giohang.php"><i class="fa-solid fa-cart-shopping"></i></a>-->
     </div>
  </div>

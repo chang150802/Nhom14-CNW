@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="form-submit-btn mt-16">
-                            <input type="submit" value="SEND">
+                            <input type="submit" name="submit" value="SEND">
                         </div>
 
                     </form>
@@ -65,20 +65,25 @@
     $mysqli = new mysqli("localhost","root","","website");
     $conn_c = mysqli_connect("localhost","root","","website");
     // Get the form data
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    $name = '';
+    $email = '';
+    $message = '';
+    if(isset($_POST['submit'])){
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+    }
 
     // Insert the form data into the database
     $sql_c = "INSERT INTO contacts (name, email, message) VALUES ('$name', '$email', '$message')";
     if (mysqli_query($conn_c, $sql_c)) {
-        echo "Form data inserted successfully!";
+        //echo "Form data inserted successfully!";
     } else {
         echo "Error inserting form data: " . mysqli_error($conn_c);
     }
 
     // Close the database connection
-    //mysqli_close($conn);
+    mysqli_close($conn_c);
     ?>
 </body>
 </html>

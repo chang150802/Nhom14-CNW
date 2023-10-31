@@ -126,7 +126,6 @@ html{
     cursor: pointer;
 }
 
-
 /*2.silder*/
 .slider-container {
     position: relative;
@@ -216,11 +215,12 @@ button:focus {
 /*3.content*/
 .content{
     padding: 5px 0;
-    height: 600px;
+    /* height: 600px; */
     color: white;
     background-color: #470808;
 }
 /*Sản phẩm*/
+
 .product-title{
     font-size: 30px;
     font-weight: 500;
@@ -233,7 +233,7 @@ button:focus {
     grid-template-columns: repeat(4, 1fr);
     margin: 0 3%;
     padding-top: 2%;
-    gap:30px;
+    gap: 30px;
 }
 .product-box{
     position: relative;
