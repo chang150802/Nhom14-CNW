@@ -31,7 +31,7 @@ if(isset($_POST["sbm"])){
         $L = $_POST["L"];
         $PS = $_POST["PS"];
 
-        $sql = "UPDATE products SET product_name = '$product_name',product_img_name = '$product_img_name',price = '$price',product_desc = '$product_desc',L = '$L',PS = '$PS'";
+        $sql = "UPDATE products SET product_name = '$product_name',product_img_name = '$product_img_name',price = '$price',product_desc = '$product_desc',L = '$L',PS = '$PS' WHERE id = '$pro_id'";
         $query = mysqli_query($connect,$sql);
  // Kiểm tra kết quả
 if ($sql) {

@@ -18,6 +18,7 @@
             //kiểm tra tài khoản và mật khẩu có hợp lệ không
             $result = $mysqli->query($sql);
             $num_rows = mysqli_num_rows($result);
+
             if($num_rows == 0){
                 echo "Username or password is not correct, please try again!";
             }else{
@@ -26,7 +27,7 @@
                 $array = [];
                 $_SESSION['id'] = $row->$array['id'];
                 $_SESSION['level'] = $row->$array['level'];
-                header('Location: main_ad.php');
+                header('Location: main.php');
             }
         }
     }
