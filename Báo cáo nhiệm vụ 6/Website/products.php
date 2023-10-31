@@ -20,7 +20,6 @@
     <?php include "trangchu/hearder.php";?>
     <!-- Sản phẩm-->
     <main class="container">
-        <a class="item-sp" href="xem_ds_sp.php"><i class="fa-solid fa-add"></i> Xem danh sách sản phẩm</a>
         <?php
             $results = $mysqli->query("SELECT * FROM products ORDER BY id ASC");
             $obj = $results->fetch_object();

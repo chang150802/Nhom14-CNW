@@ -27,7 +27,7 @@
                 $array = [];
                 $_SESSION['id'] = $row->$array['id'];
                 $_SESSION['level'] = $row->$array['level'];
-                header('Location: main.php');
+                header('Location: xem_ds_sp.php');
             }
         }
     }
