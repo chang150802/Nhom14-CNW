@@ -60,7 +60,7 @@ $query = mysqli_query($connect, $sql);
                     <?php } ?>
                 </tbody>
             </table>
-            <a class="btn btn-primary" href="xem_ds_sp.php?page_layout=them">Them moi</a>
+            <a class="btn btn-primary" href="xem_ds_sp.php?page_layout=them">Thêm mới</a>
         </div>
     </div>
  </div>
